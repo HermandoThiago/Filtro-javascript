@@ -17,14 +17,19 @@
     </header>
 
     <main class="bg-slate-900 flex justify-center items-center">
-        <div class="container px-4 py-5 flex items-center flex flex-wrap justify-center items-center">
-            <div class="search flex flex-wrap justify-center items-center w-full bg-white">
-                <input type="text" placeholder="Pesquise aqui" class="px-2 py-1 w-full rounded-sm"  />
-                <button type="submit" class="bg-slate-300 py-1 px-4 m-2 rounded-sm w-full font-mono text-xl font-bold">Pesquisar</button>
+        <div class="container px-4 py-5 flex items-center flex flex-wrap justify-center">
+
+            <p class="font-mono text-white text-3xl mb-6 py-4">Funcionários</p>
+
+            <div class="search flex flex-wrap justify-center items-center w-full">
+                <input type="text" id="input-filter" placeholder="Pesquise o funcionario aqui..." class="px-2 py-1 w-full mb-4 rounded-sm"  />
             </div>
-            <div class="cards bg-blue-200 my-2 w-full px-2 py-2 rounded-md flex flex-wrap justify-center items-center">
-               
+            
+            <div class="cards bg-slate-900 my-2 w-full py-0 rounded-md flex flex-wrap justify-center items-center">
+            
             </div>
+
+            <span class="font-mono text-white font-bold text-lg py-4 hidden" id="zero">Nenhum funcionario encontrado com esse nome!</span>
         </div>
     </main>
 

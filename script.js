@@ -1,4 +1,6 @@
 let cards = document.querySelector(".cards")
+let textSearch = document.getElementById("input-filter")
+let span = document.getElementById("zero")
 let data = [
     {
         foto: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -44,16 +46,16 @@ let data = [
     }
 ]
 
-let funcCards = data.map((e) => {
+data.map((e) => {
 
     cards.innerHTML += `
-    <div class="funcionario-card bg-slate-900 w-full flex items-center justify-center rounded-md h-48 my-2 shadow-lg">
+    <div class="funcionario-card bg-slate-800 w-full flex items-center justify-center rounded-md h-48 my-2 shadow-lg border-slate-100 border-2">
         <div class="img inline-block bg-slate-900 w-4/12 h-full flex justify-center">
             <img src="`+e.foto+`" alt="foto de funcionario"
                 class="rounded-md max-h-full w-full"
             >
         </div>
-        <div class="desc inline-block w-10/12 h-full pl-4 bg-slate-900 rounded-md">
+        <div class="desc inline-block w-10/12 h-full pl-4 bg-slate-800 rounded-md">
             <h2 class="text-2xl font-mono font-bold text-white mb-4 mt-6">`+e.nome+`</h2>
             <h3 class="text-lg font-mono text-white">Setor: `+e.setor+`</h3>
             <h3 class="text-lg font-mono text-white">Salário: R$ `+e.salario+`</h3>
@@ -63,3 +65,17 @@ let funcCards = data.map((e) => {
     `
 })
 
+textSearch.onkeyup = function(e){
+
+    t = this.value
+
+    r = new RegExp(t,"g")
+
+    for(i in data){
+        if(data[i].nome.match(r))
+            cards.children[i].removeAttribute("Style")
+        else
+            cards.children[i].style.display = "none"
+    }
+
+}
