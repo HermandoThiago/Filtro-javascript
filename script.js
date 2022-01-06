@@ -69,7 +69,7 @@ textSearch.onkeyup = function(e){
 
     t = this.value
 
-    r = new RegExp(t,"g")
+    r = new RegExp(t,"i")
 
     for(i in data){
         if(data[i].nome.match(r))
