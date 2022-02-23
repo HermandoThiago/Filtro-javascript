@@ -2,7 +2,10 @@
 
 ### Projeto ainda em andamento
 
-#### Mobile-First já concluído, faltando apenas terminar o design para tablet e desktop
+#### Responsividade:
+
++ Mobile
++ Desktop
 
 #### Tecnologias que estou utilizando:
 
